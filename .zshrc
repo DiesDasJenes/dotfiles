@@ -55,6 +55,3 @@ source $ZSH/oh-my-zsh.sh
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #export FZF_TMUX_HEIGHT=13
 
-#If jenv and rbenv are installed
-#eval "$(jenv init -)"
-#eval "$(rbenv init -)"
