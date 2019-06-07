@@ -2,6 +2,7 @@
 
 ![Screenshot of my shell prompt](https://i.imgur.com/eZQeFdj.png)
 
+Use the 'pullAllRepos.sh' to pull all repos under this path '~/git/'*
 
 ## MacOS pull all repos
 
