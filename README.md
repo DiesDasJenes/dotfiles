@@ -49,3 +49,43 @@ alias git-identity-projectX='git config user.name "Name Name" && git config user
 ```bash
 find . -name '*.sh' -exec grep -I "to\_base64" '{}' '+'
 ```
+
+### How to have multiple ssh keys
+
+In your ssh config in ~/.ssh/config
+
+```bash
+# Personal account
+Host github.com-privat
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa
+#Second ssh key
+Host github.com-KeyNameForProject
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/project_rsa
+```
+
+In the project git repository your .git/config will look like this
+```bash
+
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+    ignorecase = true
+    precomposeunicode = true
+[remote "origin"]
+    url = git@github.com-KeyNameForProject:git-org/name_of_repo.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+[commit]
+    template = /Users/path/.git/.gitmessage.txt
+[user]
+    email = name.name@email.de
+    name = name
+```    
