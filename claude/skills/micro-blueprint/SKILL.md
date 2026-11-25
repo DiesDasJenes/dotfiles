@@ -1,6 +1,6 @@
 ---
 name: micro-blueprint
-description: Use for any coding task: features, bug fixes, refactoring, tests, schema or API changes. Work in tiny verifiable steps, showing a failing test or signature before implementing.
+description: "Use for any coding task: features, bug fixes, refactoring, tests, schema or API changes. Work in tiny verifiable steps, showing a failing test or signature before implementing."
 ---
 
 # Micro-blueprint: how we work together
